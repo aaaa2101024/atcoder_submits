@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+using pll = pair<long, long>;
+using vl = vector<ll>;
+#define all(x) (x).begin(), (x).end()
+#define rep(i, n) for (int i = 0; i < n; i++)
+constexpr ll INFLL = (1ll << 62);
+constexpr int INF = (1 << 30);
+#define Yes(x)                 \
+    if (x)                     \
+        cout << "Yes" << endl; \
+    else                       \
+        cout << "No" << endl;
+
+int main()
+{
+    string s;
+    cin >> s;
+    int n = s.size();
+    set<char> x;
+    rep(i,n)
+    {
+        x.insert(s[i]);
+    }
+    rep(i,26)
+    {
+        if(!x.count(char('a' + i)))
+        {
+            cout << char('a' + i) << endl;
+            return 0;
+        }
+    }
+}

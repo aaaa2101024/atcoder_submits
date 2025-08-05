@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+using pll = pair<long, long>;
+#define all(x) (x).begin(), (x).end()
+#define rep(i, n) for (int i = 0; i < n; i++)
+constexpr ll INFLL = (1ll << 62);
+constexpr int INF = (1 << 30);
+#define Yes(x)                 \
+    if (x)                     \
+        cout << "Yes" << endl; \
+    else                       \
+        cout << "No" << endl;
+
+int main()
+{
+    ll n,m;
+    cin >> n >> m;
+    ll ch = 1000000000;
+    ll sum = 0;
+    for(int i = -1;i < m;i++)
+    {
+        long summ = 1;
+        for(int j = 0;j <= i;j++)
+        {
+            summ *= n;
+        }
+        sum += summ;
+        if(ch < sum)
+        {
+            cout << "inf" << endl;
+            return 0;
+        }
+    }
+    cout << sum << endl;
+}
