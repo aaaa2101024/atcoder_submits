@@ -15,27 +15,33 @@ constexpr int INF = (1 << 30);
 
 int main()
 {
-    string s;
-    cin >> s;
-    int n = s.size();
-    double Ma = 0;
+    int n;
+    string t;
+    cin >> n >> t;
+    ll ans = 0;
+    vl ran(0);
     for (int i = 0; i < n; i++)
     {
-        for (int j = i + 1; j < n; j++)
+        int cnt = 0;
+        while (i < n - 1 && t[i] == t[i + 1])
         {
-            if (s[i] == s[j] && s[i] == 't' && i + 1 != j)
+            cnt++;
+            i++;
+        }
+        ran.emplace_back(cnt);
+    }
+    bool f = t[0] == 1;
+        for (int i = 0; i < ran.size(); i++)
+        {
+            if (f)
             {
-                int cnt = 0;
-                for (int k = i + 1; k < j; k++)
-                {
-                    if (s[k] == 't')
-                    {
-                        cnt++;
-                    }
-                }
-                Ma = max(Ma, double(cnt) / (j - i + 1 - 2));
+                f = false;
+                ans += ran[i] * (ran[i] + 1) / 2;
+            }
+            else
+            {
+                f = true;
+                
             }
         }
-    }
-    printf("%.10lf\n", Ma);
 }

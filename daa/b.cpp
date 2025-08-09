@@ -17,15 +17,23 @@ int main()
 {
     int n;
     cin >> n;
-    string s;
-    cin >> s;
-    if (n < 3)
+    vl a(n);
+    rep(i,n)
     {
-        Yes(false);
+        cin >> a[i];
     }
-    else
+    set<int> ch;
+    rep(i,n)
     {
-        string t = s.substr(n - 3, 3);
-        Yes(t == "tea");
+        ch.insert(a[i]);
     }
+    rep(i,2001)
+    {
+        if(!ch.count(i))
+        {
+            cout << i << endl;
+            return 0;
+        }
+    }
+
 }

@@ -15,5 +15,26 @@ constexpr int INF = (1 << 30);
 
 int main()
 {
-    
+    int n;
+    string t;
+    cin >> n >> t;
+    ll ans = 0;
+    int l = 0, r = 0;
+    for (; l < n && r < n; l++)
+    {
+        if (t[r] == '1')
+        {
+            while (r < n - 1)
+            {
+                
+                r++;
+            }
+            ans += ((r - l + 1) + 1) * (r - l + 1) / 2;
+        }
+        else if(r < n - 1 && t[r] == t[r + 1] && t[r] == '0')
+        {
+
+        }
+    }
+    cout << ans << endl;
 }

@@ -15,17 +15,5 @@ constexpr int INF = (1 << 30);
 
 int main()
 {
-    int n;
-    cin >> n;
-    string s;
-    cin >> s;
-    if (n < 3)
-    {
-        Yes(false);
-    }
-    else
-    {
-        string t = s.substr(n - 3, 3);
-        Yes(t == "tea");
-    }
+    
 }
