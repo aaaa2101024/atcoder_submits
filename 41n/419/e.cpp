@@ -15,22 +15,12 @@ constexpr int INF = (1 << 30);
 
 int main()
 {
-    string s;
-    cin >> s;
-    if (s == "red")
+    ll n,m,l;
+    cin >> n >> m >> l;
+    vl a(n);
+    rep(i,n)
     {
-        cout << "SSS" << endl;
+        cin >> a[i];
     }
-    else if (s == "blue")
-    {
-        cout << "FFF" << endl;
-    }
-    else if (s == "green")
-    {
-        cout << "MMM" << endl;
-    }
-    else
-    {
-        cout << "Unknown" << endl;
-    }
+    
 }

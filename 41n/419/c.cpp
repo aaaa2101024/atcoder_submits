@@ -15,5 +15,23 @@ constexpr int INF = (1 << 30);
 
 int main()
 {
-    
+    int n;
+    cin >> n;
+    vl r(n), c(n);
+    ll ans = 0;
+    rep(i, n)
+    {
+        cin >> r[i] >> c[i];
+    }
+    sort(all(r));
+    sort(all(c));
+    if (r[n - 1] - r[0] != 0)
+    {
+        ans = max(ans, (r[n - 1] - r[0]) / 2 + (r[n - 1] - r[0]) % 2);
+    }
+    if (r[n - 1] - r[0] != 0)
+    {
+        ans = max(ans, (c[n - 1] - c[0]) / 2 + (c[n - 1] - c[0]) % 2);
+    }
+    cout << ans << endl;
 }

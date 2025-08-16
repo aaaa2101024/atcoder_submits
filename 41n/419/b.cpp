@@ -15,5 +15,23 @@ constexpr int INF = (1 << 30);
 
 int main()
 {
-    
+    int q;
+    cin >> q;
+    priority_queue<int, vector<int>, greater<int>> aaaa;
+    rep(_, q)
+    {
+        int que;
+        cin >> que;
+        if (que == 1)
+        {
+            int x;
+            cin >> x;
+            aaaa.push(x);
+        }
+        else
+        {
+            cout << aaaa.top() << endl;
+            aaaa.pop();
+        }
+    }
 }

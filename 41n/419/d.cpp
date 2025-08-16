@@ -15,5 +15,34 @@ constexpr int INF = (1 << 30);
 
 int main()
 {
-    
+    int n, m;
+    cin >> n >> m;
+    string s;
+    string t;
+    cin >> s >> t;
+    vl imosu(n + 1, 0);
+    rep(_, m)
+    {
+        ll l, r;
+        cin >> l >> r;
+        l--;
+        imosu[l]++;
+        imosu[r]--;
+    }
+    for (int i = 1; i < n; i++)
+    {
+        imosu[i] += imosu[i - 1];
+    }
+    rep(i, n)
+    {
+        if (imosu[i] % 2 == 1)
+        {
+            cout << t[i];
+        }
+        else
+        {
+            cout << s[i];
+        }
+    }
+    cout << endl;
 }
