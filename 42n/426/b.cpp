@@ -15,5 +15,27 @@ constexpr int INF = (1 << 30);
 
 int main()
 {
-    
+    string s;
+    cin >> s;
+    map<char, int> cnt;
+    int n = s.size();
+    rep(i, n)
+    {
+        if (cnt.count(s[i]))
+        {
+            cnt[s[i]]++;
+        }
+        else
+        {
+            cnt[s[i]] = 1;
+        }
+    }
+    for (auto x : cnt)
+    {
+        if (x.second == 1)
+        {
+            cout << x.first << endl;
+            return 0;
+        }
+    }
 }

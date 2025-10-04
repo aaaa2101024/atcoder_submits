@@ -15,5 +15,15 @@ constexpr int INF = (1 << 30);
 
 int main()
 {
-    
+    int n, q;
+    cin >> n >> q;
+    vl sum(n,0);
+    rep(i,n)
+    {
+        sum[i] = i + 1;
+    }
+    rep(_,q)
+    {
+
+    }
 }
