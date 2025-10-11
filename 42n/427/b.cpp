@@ -15,5 +15,20 @@ constexpr int INF = (1 << 30);
 
 int main()
 {
-    
+    long n;
+    cin >> n;
+    vl a(1000);
+    a[0] = 1;
+    a[1] = 1;
+    for (int i = 2; i < 1000; i++)
+    {
+        string s = to_string(a[i - 1]);
+        ll sum = 0;
+        rep(j, s.size())
+        {
+            sum += int(s[j] - '0');
+        }
+        a[i] = sum + a[i - 1];
+    }
+    cout << a[n] << endl;
 }

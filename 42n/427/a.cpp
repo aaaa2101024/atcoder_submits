@@ -15,5 +15,19 @@ constexpr int INF = (1 << 30);
 
 int main()
 {
-    
+    string s;
+    cin >> s;
+    int n = s.size();
+    for (int i = 0; i < n; i++)
+    {
+        if (i + 1 == (n + 1) / 2)
+        {
+            continue;
+        }
+        else
+        {
+            cout << s[i];
+        }
+    }
+    cout << endl;
 }
