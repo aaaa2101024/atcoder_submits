@@ -15,5 +15,12 @@ constexpr int INF = (1 << 30);
 
 int main()
 {
-    
+    int t;
+    cin >> t;
+    rep(_, t)
+    {
+        ll c, d;
+        cin >> c >> d;
+        
+    }
 }

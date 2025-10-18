@@ -15,5 +15,22 @@ constexpr int INF = (1 << 30);
 
 int main()
 {
-    
+    int s,a,b,x;
+    cin >> s >> a >> b >> x;
+    int ans = 0;
+    while(x > 0)
+    {
+        if(x - a >= 0)
+        {
+            ans += a * s;
+            x -= a;
+            x -= b;
+        }
+        else
+        {
+            ans += s * x;
+            x = 0;
+        }
+    }
+    cout << ans << endl;
 }
