@@ -15,5 +15,35 @@ constexpr int INF = (1 << 30);
 
 int main()
 {
-    
+    int n, a, b;
+    cin >> n >> a >> b;
+    string s;
+    cin >> s;
+    int l = 0, r = 0;
+    int suma = 0, sumb = 0;
+    int ans = 0;
+    for (; r < n;)
+    {
+        while (sumb != b && r < n)
+        {
+            if (s[r] == 'a')
+                suma++;
+            else
+                sumb++;
+            r++;
+            if (suma >= a && sumb < b)
+                ans++;
+        }
+        while (sumb == b && l < r)
+        {
+            if (s[l] == 'a')
+                suma--;
+            else
+                sumb--;
+            if (suma >= a && sumb < b - 1)
+                ans++;
+            l++;
+        }
+    }
+    cout << ans << endl;
 }

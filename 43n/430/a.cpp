@@ -15,7 +15,17 @@ constexpr int INF = (1 << 30);
 
 int main()
 {
-    int h,w;
-    cin >> h >> w;
-    vector<
+    int a, b, c, d;
+    cin >> a >> b >> c >> d;
+    if (a <= c)
+    {
+        if (b > d)
+        {
+            Yes(1);
+        }
+        else
+            Yes(0);
+    }
+    else
+        Yes(0);
 }

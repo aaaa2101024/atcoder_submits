@@ -15,7 +15,5 @@ constexpr int INF = (1 << 30);
 
 int main()
 {
-    int h,w;
-    cin >> h >> w;
-    vector<
+
 }
