@@ -15,28 +15,7 @@ constexpr int INF = (1 << 30);
 
 int main()
 {
-    int n, m;
-    cin >> n >> m;
-    vl a(n);
-    rep(i, n)
-            cin >>
-        a[i];
-    rep(i, n)
-    {
-        int sum = 0;
-        rep(j, n)
-        {
-            if (i == j)
-                continue;
-            else
-                sum += a[j];
-        }
-        if (sum == m)
-        {
-            Yes(1);
-            return 0;
-        }
-    }
-    Yes(0);
-    return 0;
+    int h,w;
+    cin >> h >> w;
+    vector<
 }
