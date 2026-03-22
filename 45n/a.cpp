@@ -15,8 +15,16 @@ constexpr int INF = (1 << 30);
 
 int main()
 {
-    ll ans = 0;
-    ll l, r, d, u;
-    cin >> l >> r >> d >> u;
-    
+    int n;
+    cin >> n;
+    for(int i = n;i >= 1;i--)
+    {
+        if(i != 1)
+        {
+            cout << i << ',';
+        }
+        else
+            cout << i;
+    }
+    cout << endl;
 }
